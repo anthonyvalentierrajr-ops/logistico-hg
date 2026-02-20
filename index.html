@@ -1,64 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Anthony Valentierra - Diseño Digital</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Anthony Valentierra - Soluciones Digitales</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hola, soy Anthony Valentierra</h1>
-    <p>¡Diseño y doy soluciones digitales con propósito!</p>
 
-    <img src="img/Ilustración digital 1 copy.png" alt="Logo de Anthony" width="200">
+  <header class="site-header">
+    <div class="header-top">
+      <img src="img/Ilustración digital 1 copy.png" alt="Logo de Anthony Valentierra" class="logo">
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Mis Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <button onclick="saludar()">Haz clic aquí</button>
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Hola, soy Anthony Valentierra</h1>
+      <p class="hero-sub">¡Diseño y doy soluciones digitales con propósito!</p>
+      <hr class="hero-divider">
+      <p class="hero-lead">Descubre mis proyectos y servicios.</p>
+      <div class="hero-ctas">
+        <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+        <a href="#contacto" class="btn btn-secondary">Contactar</a>
+      </div>
+    </div>
+  </section>
 
-    <section>
-        <h2>Sobre mí</h2>
-        <p>Soy estudiante de ingeniería de sistemas que le apasiona el front-end, el diseño y la identidad visual.</p>
-    </section>
+  <section class="sobre-mi" id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Soy estudiante de Ingeniería de Sistemas, apasionado por el desarrollo front-end, el branding visual y la creación de soluciones digitales. Cuento con experiencia en servicios de sistemas, diseño de identidad visual, diseño gráfico operativo y desarrollo digital. Mi enfoque está orientado a crear soluciones funcionales, coherentes y alineadas con los objetivos del negocio, siempre priorizando la excelencia y la satisfacción del cliente.</p>
+  </section>
 
-  <section class="proyectos">
+  <section class="proyectos" id="proyectos">
     <h2>Mis Proyectos</h2>
     <div class="contenedor-proyectos">
-        <div class="tarjeta">
-            <img src="img/computer-engineer-holds-pc-motherboard-network-equipment-maintenance-it-manager-his-workplace-professional-business-security-1-1.jpg" alt="Proyecto 1">
-            <h3>Servicios de Sistemas</h3>
-            <p>Mantenimiento y soporte de software orientado a la correcta operación de los sistemas, actualizaciones, optimización del rendimiento y resolución de incidencias.</p>
-        </div>
+      <a href="servicios_de_sistemas.html" class="tarjeta">
+        <img src="img/computer-engineer-holds-pc-motherboard-network-equipment-maintenance-it-manager-his-workplace-professional-business-security-1-1.jpg" alt="Servicios de Sistemas">
+        <h3>Servicios de Sistemas</h3>
+      </a>
 
-        <div class="tarjeta">
-            <img src="img/FRÜVIA_logo.jpeg" alt="Proyecto 2">
-            <h3>Identidad Visual</h3>
-            <p>Diseño de identidad visual enfocado en crear una imagen coherente, profesional y alineada al posicionamiento de la marca, asegurando consistencia y reconocimiento en todos los canales.</p>
-        </div>
+      <a href="identidad_visual.html" class="tarjeta">
+        <img src="img/FRÜVIA_logo.jpeg" alt="Identidad Visual">
+        <h3>Identidad Visual</h3>
+      </a>
 
-        <div class="tarjeta">
-            <img src="img/FLYER DISEÑO Y SOLUCIONES DIGITALES CON PROPÓSITO.jpg" alt="Proyecto 3">
-            <h3>Diseño Gráfico Operativo</h3>
-            <p>Creación de piezas gráficas funcionales como flyers, banners y piezas publicitarias, enfocadas en una comunicación clara, coherente y alineada a los objetivos del negocio.</p>
-        </div>
+      <a href="diseño_grafico_operativo.html" class="tarjeta">
+        <img src="img/FLYER DISEÑO Y SOLUCIONES DIGITALES CON PROPÓSITO.jpg" alt="Diseño Gráfico Operativo">
+        <h3>Diseño Gráfico Operativo</h3>
+      </a>
 
-        <div class="tarjeta">
-            <img src="img/PROVERLI idea visual de la web.jpg" alt="Proyecto 4">
-            <h3>Desarrollo Digital</h3>
-            <p>Diseño y desarrollo digital con enfoque en UX/UI y front-end, utilizando HTML, CSS y JavaScript para crear interfaces funcionales y alineadas al negocio.</p>
-        </div>
+      <a href="desarrollo_digital.html" class="tarjeta">
+        <img src="img/PROVERLI idea visual de la web.jpg" alt="Desarrollo Digital">
+        <h3>Desarrollo Digital</h3>
+      </a>
     </div>
-</section>
+  </section>
 
-<section class="contacto">
+  <section class="contacto" id="contacto">
     <h2>Contacto</h2>
     <p>Si quieres ponerte en contacto conmigo, puedes escribirme a:</p>
-    <p><strong>WhatsApp:</strong> +57 317 470 0562</p>
-    <p><strong>Email:</strong> anthonyvalentierrajr@gmail.com</p>
+    <p><strong>WhatsApp:</strong> <a href="https://wa.me/573174790562" target="_blank">+57 317 479 0562</a></p>
+    <p><strong>Email:</strong> <a href="mailto:anthonyvalentierrajr@gmail.com">anthonyvalentierrajr@gmail.com</a></p>
     <p>También puedes encontrarme en mis redes sociales:</p>
     <ul>
-        <li><a href="https://www.facebook.com/anthony.valentierra" target="_blank">Facebook</a></li>
-        <li><a href="https://www.instagram.com/anthonyvalg" target="_blank">Instagram</a></li>
+      <li><a href="https://www.facebook.com/anthony.valentierra" target="_blank">Facebook</a></li>
+      <li><a href="https://www.instagram.com/anthonyvalg" target="_blank">Instagram</a></li>
     </ul>
-</section>
+  </section>
 
-    <script src="script.js"></script>
+  <footer class="site-footer">
+    <p>© 2026 Anthony Valentierra - Soluciones Digitales</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
