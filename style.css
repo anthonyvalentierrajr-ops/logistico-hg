@@ -266,24 +266,32 @@ nav a:hover, nav a.active {
 }
 
 .producto-card {
-  background: var(--blanco);
-  padding: 25px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  text-align: center;
-  transition: all 0.4s ease;
+    background: var(--blanco);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    /* Esto hace que el movimiento sea suave */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
 }
 
+/* Efecto al pasar el mouse (Hover) */
 .producto-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-  border-color: var(--azul-principal);
+    transform: translateY(-10px); /* Se eleva 10 píxeles */
+    box-shadow: 0 15px 30px rgba(0, 50, 133, 0.15); /* Sombra azulada suave */
+    border-color: var(--azul-principal); /* El borde cambia al azul de tu marca */
 }
 
-.producto-card img { 
-  max-width: 100%; 
-  border-radius: 5px; 
-  margin-bottom: 15px; 
+/* Efecto opcional para la imagen dentro de la tarjeta */
+.producto-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.producto-card:hover img {
+    transform: scale(1.05); /* La foto crece un 5% muy sutilmente */
 }
 
 /* ============================================================
@@ -316,23 +324,25 @@ input, select, textarea {
 }
 
 button[type="submit"] {
-  background-color: var(--azul-principal);
-  color: var(--blanco);
-  border: none;
-  padding: 14px 30px;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  width: 100%;
+    background-color: var(--azul-principal);
+    color: #ffffff !important;
+    text-transform: none;         /* Mantiene mayúsculas y minúsculas */
+    border: none;
+    padding: 14px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;    /* Esto hace que la animación sea suave */
 }
 
+/* --- EFECTO DE MOVIMIENTO (HOVER) --- */
 button[type="submit"]:hover {
-  background-color: var(--azul-oscuro);
-  letter-spacing: 1px;
-  box-shadow: 0 6px 20px rgba(0, 50, 133, 0.3);
-  transform: translateY(-2px);
+    background-color: var(--azul-oscuro);
+    color: #ffffff !important;
+    transform: translateY(-4px);  /* Hace que el botón "suba" al pasar el mouse */
+    box-shadow: 0 6px 15px rgba(0, 50, 133, 0.3); /* Agrega una sombra al elevarse */
 }
 
 .contacto-grid {
