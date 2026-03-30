@@ -33,46 +33,31 @@ h1, h2, h3, h4 {
 }
 
 /* ============================================================
-    2. HEADER Y NAVEGACIÓN (BARRA AZUL)
+    2. HEADER Y NAVEGACIÓN
    ============================================================ */
 header {
   background-color: var(--blanco);
-  padding: 15px 20px;
-  border-bottom: 5px solid var(--amarillo-hg);
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid #eee; /* Línea divisoria muy fina */
 }
 
 .logo img { 
-  max-width: 200px; 
+  max-width: 180px; 
   height: auto; 
 }
 
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 30px;
-  height: 25px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.menu-toggle span { 
-  width: 30px; 
-  height: 3px; 
-  background-color: var(--azul-principal); 
-  border-radius: 10px; 
-}
-
+/* La barra azul ahora es más estilizada y OVALADA */
 nav { 
-  background: var(--azul-principal); 
-  width: 100%; 
+  background-color: var(--azul-principal); 
+  width: 100%;
+  border-radius: 50px; /* Esto la hace ovalada en las puntas */
+  overflow: hidden; /* Asegura que el color azul no se salga del óvalo */
 }
 
 nav ul { 
@@ -86,16 +71,36 @@ nav ul {
 nav a {
   color: var(--blanco);
   text-decoration: none;
-  font-weight: bold;
-  font-size: 17px;
-  padding: 15px 25px;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 12px 25px; /* Altura más compacta y moderna */
   display: inline-block;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  /* CAMBIO AQUÍ: Primera Mayúscula, demás minúsculas */
+  text-transform: capitalize; 
+  letter-spacing: 0.5px;
 }
 
+/* Efecto moderno: solo una línea amarilla brillante abajo al pasar el mouse */
 nav a:hover, nav a.active { 
   background-color: var(--azul-oscuro); 
-  border-bottom: 3px solid var(--amarillo-hg); 
+  box-shadow: inset 0 -3px 0 var(--amarillo-hg); 
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span { 
+  width: 30px; 
+  height: 3px; 
+  background-color: var(--azul-principal); 
+  border-radius: 10px; 
 }
 
 /* ============================================================
@@ -372,13 +377,14 @@ button[type="submit"]:hover {
 }
 
 /* ============================================================
-    7. FOOTER
+    7. FOOTER (VERSIÓN COMPACTA ESTILO CUN)
    ============================================================ */
 footer {
   background-color: var(--negro-footer);
   color: var(--blanco);
-  padding: 50px 20px 40px 20px; 
-  margin-top: 60px;
+  /* Bajamos de 50px a 25px para que la franja sea delgada */
+  padding: 25px 20px 15px 20px; 
+  margin-top: 40px;
 }
 
 .footer-container {
@@ -387,34 +393,36 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px;
-  padding-bottom: 30px;
+  gap: 30px;
+  /* Eliminamos el padding-bottom excesivo que tenías */
+  padding-bottom: 10px;
 }
 
 .footer-column {
-  flex: 1 1 250px;
+  flex: 1 1 200px; /* Columnas un poco más estrechas */
 }
 
 .footer-column h3 {
   color: var(--amarillo-hg) !important;
   text-align: left;
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* Espacio reducido debajo del título */
+  font-size: 1.1rem;
 }
 
 .footer-column h4 {
   color: var(--blanco) !important;
   border-bottom: 2px solid var(--amarillo-hg);
   display: inline-block;
-  margin-bottom: 20px;
-  font-size: 18px;
+  margin-bottom: 10px; /* Espacio reducido debajo del subtítulo */
+  font-size: 16px;
   text-align: left;
 }
 
 .footer-column p, .footer-column li a {
-  font-size: 14px;
+  font-size: 13px; /* Letra un poco más pequeña y profesional */
   color: #cccccc;
   text-decoration: none;
-  line-height: 1.8;
+  line-height: 1.5; /* Espaciado entre líneas más apretado */
 }
 
 .footer-column ul {
@@ -428,21 +436,9 @@ footer {
   transition: 0.3s;
 }
 
-.footer-bottom {
-  border-top: 1px solid #333;
-  margin-top: 30px;
-  padding-top: 25px;
-  text-align: center;
-}
-
-.footer-bottom p {
-  font-size: 13px;
-  color: #888 !important;
-}
-
-/* Resaltado automático del email en todas las páginas */
+/* El resaltado del email se mantiene igual */
 .footer-column a[href^="mailto:"] {
-    color: var(--amarillo-hg) !important; /* Usa el amarillo que definimos en las variables */
+    color: var(--amarillo-hg) !important;
     font-weight: 600;
     text-decoration: none;
     transition: 0.3s ease;
@@ -451,6 +447,18 @@ footer {
 .footer-column a[href^="mailto:"]:hover {
     color: var(--blanco) !important;
     text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 15px; /* Menor separación con el contenido */
+  padding-top: 15px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 12px; /* Letra de derechos reservados más pequeña */
+  color: #666 !important;
 }
 
 /* ============================================================
