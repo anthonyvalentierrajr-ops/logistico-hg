@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logístico HG S.A.S | Soluciones Logísticas y Portuarias - Nosotros</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="img/logo-logistico-hg.png" alt="Logístico HG Logo">
+  </div>
+
+  <button class="menu-toggle" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="nav-container">
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html" class="active">Nosotros</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="cotizador.html">Cotizador</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="nosotros">
+    <div class="nosotros-contenido animado slide-left">
+      <div class="nosotros-imagen">
+        <img src="img/equipo-de-trabajo.webp" alt="Equipo de trabajo">
+      </div>
+      <div class="nosotros-texto">
+        <h2>¿Quiénes somos?</h2>
+        <p>En <strong>LOGÍSTICO HG S.A.S</strong> somos una empresa líder en soluciones integrales de logística y transporte, con más de 15 años de experiencia conectando negocios a nivel nacional. Nos especializamos en la gestión eficiente de la cadena de suministro, ofreciendo servicios de transporte terrestre con cobertura en todo el territorio nacional. Nuestra razón de ser es facilitar el progreso de nuestros clientes mediante un servicio confiable, basado en entregas puntuales y seguras.</p>
+      </div>
+    </div>
+
+    <div class="nosotros-contenido reverse animado slide-right">
+      <div class="nosotros-imagen">
+        <img src="img/nuestra-historia.webp" alt="Nuestra historia">
+      </div>
+      <div class="nosotros-texto">
+        <h2>Nuestra historia</h2>
+        <p><strong>LOGÍSTICO HG S.A.S</strong> nació en el año 2010 en Buenaventura, Valle del Cauca, Colombia, con el propósito de consolidarse como un prestador de servicios logísticos confiable y en constante crecimiento. Iniciamos operaciones con un pequeño equipo de profesionales del sector transporte, comprometidos con ofrecer soluciones eficientes y de calidad. Desde nuestros inicios, construimos una cultura organizacional enfocada en el servicio, escuchando y respondiendo de manera precisa a las necesidades de nuestros clientes.</p>
+      </div>
+    </div>
+
+    <div class="nosotros-contenido animado zoom">
+      <div class="nosotros-imagen">
+        <img src="img/nuestros-valores.webp" alt="Nuestros valores">
+      </div>
+      <div class="nosotros-texto">
+        <h2>Nuestra misión</h2>
+        <p>Optimizar la cadena de suministro de nuestros clientes, siendo su aliado estratégico mediante la prestación de un servicio ágil, eficaz y seguro.</p>
+
+        <h2>Nuestra visión</h2>
+        <p>Liderar la transformación digital del sector logístico y de transporte, consolidándonos como un referente tecnológico que conecta al mundo de manera más inteligente, rápida y sostenible.</p>
+
+        <h2>Nuestros valores</h2>
+        <ul>
+          <li><strong>Compromiso:</strong> Cumplimos lo que prometemos</li>
+          <li><strong>Puntualidad:</strong> Entregas a tiempo</li>
+          <li><strong>Seguridad:</strong> Protección en cada operación</li>
+          <li><strong>Eficiencia:</strong> Procesos ágiles</li>
+          <li><strong>Innovación:</strong> Mejora continua</li>
+          <li><strong>Calidad:</strong> Servicio que responde</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>LOGÍSTICO HG S.A.S</h3>
+      <p>NIT. 901.822.392-8</p>
+      <p>Soluciones integrales en logística y transporte con eficiencia y seguridad.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="cotizador.html">Cotizador</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contacto</h4>
+      <p>Buenaventura, Valle del Cauca</p>
+      <p>Gamboa Via Alterna</p>
+      <p>Tel: +57 318 360 5653</p>
+      <p>Email: <a href="mailto:logisticohg@gmail.com">logisticohg@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 LOGÍSTICO HG S.A.S. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Lógica del Menú Hamburguesa
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navContainer = document.querySelector('.nav-container');
+
+  menuToggle.addEventListener('click', () => {
+    navContainer.classList.toggle('active');
+  });
+
+  // Lógica de Animaciones al hacer scroll
+  const animados = document.querySelectorAll(".animado");
+
+  const mostrarAnimados = () => {
+    animados.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add("visible");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", mostrarAnimados);
+  mostrarAnimados(); // activa los que ya están visibles al cargar
+});
+</script>
+
+</body>
+</html>

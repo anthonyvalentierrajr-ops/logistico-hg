@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logístico HG S.A.S | Soluciones Logísticas y Portuarias - Contacto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="img/logo-logistico-hg.png" alt="Logístico HG Logo">
+  </div>
+
+  <button class="menu-toggle" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="nav-container">
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="cotizador.html">Cotizador</a></li>
+      <li><a href="contacto.html" class="active">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="container">
+    <h2>Contáctanos</h2>
+    <p style="text-align:center;">¿Tienes alguna pregunta o necesitas más información? ¡Estamos aquí para ayudarte!</p>
+
+    <div class="contacto-grid">
+      <div class="contacto-imagen">
+        <img src="img/contactanos.webp" alt="Atención al cliente Logístico HG">
+      </div>
+
+      <div class="contacto-form">
+        <form action="contacto.php" method="post">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+
+          <label for="email">Correo:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+          <button class="btn btn-azul" type="submit">Enviar Mensaje</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="ubicacion">
+      <h3>Ubicación</h3>
+      <p>Gamboa Via Alterna, Buenaventura, Valle del Cauca</p>
+      <p>Tel: +57 318 360 5653</p>
+
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15923.447547285675!2d-77.0690!3d3.8833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e370a2569e21e17%3A0x8677f5255403e061!2sBuenaventura%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1711600000000!5m2!1ses!2sco" 
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>LOGÍSTICO HG S.A.S</h3>
+      <p>NIT. 901.822.392-8</p>
+      <p>Soluciones integrales en logística y transporte con eficiencia y seguridad.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="cotizador.html">Cotizador</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contacto</h4>
+      <p>Buenaventura, Valle del Cauca</p>
+      <p>Gamboa Via Alterna</p>
+      <p>Tel: +57 318 360 5653</p>
+      <p>Email: <a href="mailto:logisticohg@gmail.com">logisticohg@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 LOGÍSTICO HG S.A.S. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navContainer = document.querySelector('.nav-container');
+
+    menuToggle.addEventListener('click', () => {
+      navContainer.classList.toggle('active');
+    });
+
+    const links = document.querySelectorAll('.nav-links a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navContainer.classList.remove('active');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

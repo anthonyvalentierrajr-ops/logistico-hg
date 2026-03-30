@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logístico HG S.A.S | Soluciones Logísticas y Portuarias - Servicios</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="img/logo-logistico-hg.png" alt="Logístico HG Logo">
+  </div>
+
+  <button class="menu-toggle" aria-label="Abrir menú">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav class="nav-container">
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+      <li><a href="servicios.html" class="active">Servicios</a></li>
+      <li><a href="cotizador.html">Cotizador</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="container animado">
+    <h2>Lo que hacemos por ti</h2>
+    <p>Servicios de transporte y almacenamiento de alta calidad y seguridad.</p>
+
+    <div class="servicios-grid">
+      <div class="producto-card animado slide-left">
+        <img src="img/transporte-de-carga-nacional-y-urbano.webp" alt="Transporte de carga nacional y urbano">
+        <h3>Transporte de carga nacional y urbano</h3>
+        <p>Gestionamos el transporte de mercancías a nivel nacional y urbano, garantizando rutas eficientes y entregas seguras en cada operación.</p>
+      </div>
+
+      <div class="producto-card animado zoom">
+        <img src="img/soluciones-de-almacenamiento.webp" alt="Soluciones de almacenamiento">
+        <h3>Soluciones de almacenamiento</h3>
+        <p>Ofrecemos servicios de almacenamiento de carga con control de inventario, asegurando organización, trazabilidad y disponibilidad.</p>
+      </div>
+
+      <div class="producto-card animado slide-right">
+        <img src="img/alquiler-de-maquinaria.webp" alt="Alquiler de maquinaria">
+        <h3>Alquiler de maquinaria</h3>
+        <p>Disponemos de montacargas para alquiler, adaptándonos a las necesidades operativas de cada cliente.</p>
+      </div>
+
+      <div class="producto-card animado slide-left">
+        <img src="img/asesoria-logistica-y-portuaria.webp" alt="Asesoría logística y portuaria">
+        <h3>Asesoría logística y portuaria</h3>
+        <p>Brindamos acompañamiento especializado en procesos logísticos y gestión portuaria, optimizando cada etapa de la operación.</p>
+      </div>
+
+      <div class="producto-card animado zoom">
+        <img src="img/ITR.webp" alt="ITR">
+        <h3>ITR</h3>
+        <p>Realizamos el retiro de contenedores desde zonas portuarias hasta su devolución en vacío, cumpliendo con los tiempos y requisitos establecidos.</p>
+      </div>
+
+      <div class="producto-card animado slide-right">
+        <img src="img/embalaje-y-desembalaje-de-carga.webp" alt="Embalaje y desembalaje de carga">
+        <h3>Embalaje y desembalaje de carga</h3>
+        <p>Ejecutamos procesos de vaciado y embalaje de contenedores, garantizando el manejo adecuado de la mercancía según cada necesidad.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>LOGÍSTICO HG S.A.S</h3>
+      <p>NIT. 901.822.392-8</p>
+      <p>Soluciones integrales en logística y transporte con eficiencia y seguridad.</p>
+    </div>
+
+    <div class="footer-column">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="cotizador.html">Cotizador</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Contacto</h4>
+      <p>Buenaventura, Valle del Cauca</p>
+      <p>Gamboa Via Alterna</p>
+      <p>Tel: +57 318 360 5653</p>
+      <p>Email: <a href="mailto:logisticohg@gmail.com">logisticohg@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 LOGÍSTICO HG S.A.S. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Lógica del Menú Hamburguesa
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navContainer = document.querySelector('.nav-container');
+
+  menuToggle.addEventListener('click', () => {
+    navContainer.classList.toggle('active');
+  });
+
+  // Lógica de Animaciones al hacer scroll
+  const animados = document.querySelectorAll(".animado");
+
+  const mostrarAnimados = () => {
+    animados.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add("visible");
+      }
+    });
+  };
+
+  window.addEventListener("scroll", mostrarAnimados);
+  mostrarAnimados(); // activa los que ya están visibles al cargar
+});
+</script>
+
+</body>
+</html>
