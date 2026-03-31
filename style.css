@@ -284,7 +284,7 @@ nav a:hover, nav a.active {
 .producto-card:hover {
     transform: translateY(-10px); /* Se eleva 10 píxeles */
     box-shadow: 0 15px 30px rgba(0, 50, 133, 0.15); /* Sombra azulada suave */
-    border-color: var(--azul-principal); /* El borde cambia al azul de tu marca */
+    border-color: var(--azul-principal); /* El borde cambia al azul */
 }
 
 /* Efecto opcional para la imagen dentro de la tarjeta */
@@ -394,7 +394,7 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
-  /* Eliminamos el padding-bottom excesivo que tenías */
+  /* Eliminamos el padding-bottom */
   padding-bottom: 10px;
 }
 
@@ -527,3 +527,34 @@ footer {
 .slide-left { transform: translateX(-50px); }
 .slide-right { transform: translateX(50px); }
 .zoom { transform: scale(0.8); }
+
+@media screen and (max-width: 768px) {
+    .nav-container {
+        height: auto !important;
+        top: 10px; /* Un poco más de aire con el borde superior */
+        padding-bottom: 8px; /* Espacio suave al final */
+        border-radius: 15px 0 15px 15px;
+    }
+
+    .nav-container::before {
+        content: "¡Hola!";
+        display: block;
+        color: #FAE251; /* Amarillo corporativo */
+        font-size: 20px;
+        font-weight: bold;
+        /* Aumentamos de 10px a 15px arriba y de 2px a 8px abajo */
+        padding: 15px 25px 8px 25px; 
+        text-align: left;
+        line-height: 1.2;
+    }
+
+    .nav-container ul {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .nav-container a {
+        /* Se mantiene los botones compactos pero legibles */
+        padding: 12px 25px; 
+    }
+}
