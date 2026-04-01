@@ -42,7 +42,7 @@
         <div class="cta-buttons">
           <a href="cotizador.html" class="btn-azul">Solicita tu cotización</a>
           <a href="https://wa.me/573183605653?text=Hola,%20me%20gustaría%20recibir%20información%20sobre%20sus%20servicios%20logísticos."
-             class="whatsapp-link" target="_blank">
+             class="whatsapp-link" target="_blank" rel="noopener noreferrer">
              <img src="img/icono-whatsapp.png" alt="WhatsApp" class="icono-whatsapp">
           </a>
         </div>
@@ -68,13 +68,14 @@
         <li><a href="nosotros.html">Nosotros</a></li>
         <li><a href="servicios.html">Servicios</a></li>
         <li><a href="cotizador.html">Cotizador</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </div>
 
     <div class="footer-column">
       <h4>Contacto</h4>
       <p>Buenaventura, Valle del Cauca</p>
-      <p>Gamboa Via Alterna</p>
+      <p>Vía alterna</p>
       <p>Tel: +57 318 360 5653</p>
       <p>Email: <a href="mailto:logisticohg@gmail.com">logisticohg@gmail.com</a></p>
     </div>
@@ -85,25 +86,6 @@
   </div>
 </footer>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navContainer = document.querySelector('.nav-container');
-
-    // Menú móvil
-    menuToggle.addEventListener('click', () => {
-      navContainer.classList.toggle('active');
-    });
-
-    // Cerrar menú al hacer clic
-    const links = document.querySelectorAll('.nav-links a');
-    links.forEach(link => {
-      link.addEventListener('click', () => {
-        navContainer.classList.remove('active');
-      });
-    });
-  });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>

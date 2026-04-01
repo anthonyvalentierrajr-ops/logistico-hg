@@ -44,7 +44,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid #eee; /* Línea divisoria muy fina */
+  border-bottom: 1px solid #eee; 
 }
 
 .logo img { 
@@ -52,12 +52,11 @@ header {
   height: auto; 
 }
 
-/* La barra azul ahora es más estilizada y OVALADA */
 nav { 
   background-color: var(--azul-principal); 
   width: 100%;
-  border-radius: 50px; /* Esto la hace ovalada en las puntas */
-  overflow: hidden; /* Asegura que el color azul no se salga del óvalo */
+  border-radius: 50px; 
+  overflow: hidden; 
 }
 
 nav ul { 
@@ -73,15 +72,13 @@ nav a {
   text-decoration: none;
   font-weight: 600;
   font-size: 15px;
-  padding: 12px 25px; /* Altura más compacta y moderna */
+  padding: 12px 25px; 
   display: inline-block;
   transition: all 0.3s ease;
-  /* CAMBIO AQUÍ: Primera Mayúscula, demás minúsculas */
   text-transform: capitalize; 
   letter-spacing: 0.5px;
 }
 
-/* Efecto moderno: solo una línea amarilla brillante abajo al pasar el mouse */
 nav a:hover, nav a.active { 
   background-color: var(--azul-oscuro); 
   box-shadow: inset 0 -3px 0 var(--amarillo-hg); 
@@ -104,7 +101,7 @@ nav a:hover, nav a.active {
 }
 
 /* ============================================================
-    3. INICIO: BANNER HERO ESTILO ZEBRA (CON TÍTULO ESCALONADO)
+    3. INICIO: BANNER HERO ESTILO ZEBRA
    ============================================================ */
 .hero {
   position: relative;
@@ -118,6 +115,7 @@ nav a:hover, nav a.active {
   align-items: center;
   justify-content: center;
   margin: 0;
+  z-index: 1; /* Agregado para detección de clic */
 }
 
 .hero-overlay {
@@ -136,9 +134,8 @@ nav a:hover, nav a.active {
   color: var(--blanco);
 }
 
-/* Ajuste del Título Escalonado */
 .hero-content h1 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem); /* Tamaño para el "Bienvenidos a" */
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 700;
   margin-bottom: 20px;
   color: var(--blanco) !important;
@@ -147,8 +144,8 @@ nav a:hover, nav a.active {
 }
 
 .hero-content h1 span {
-  display: block; /* Baja a la siguiente línea */
-  font-size: clamp(2.5rem, 6vw, 4rem); /* Nombre de la empresa más grande */
+  display: block; 
+  font-size: clamp(2.5rem, 6vw, 4rem); 
   color: var(--amarillo-hg) !important;
   margin-top: 10px;
   text-transform: uppercase;
@@ -213,6 +210,8 @@ nav a:hover, nav a.active {
    ============================================================ */
 .nosotros { 
   padding: 60px 20px; 
+  position: relative;
+  z-index: 1; /* Agregado para detección de clic */
 }
 
 .nosotros-contenido {
@@ -254,6 +253,8 @@ nav a:hover, nav a.active {
   padding: 40px 20px; 
   max-width: 1200px; 
   margin: 0 auto; 
+  position: relative;
+  z-index: 1; /* Agregado para detección de clic */
 }
 
 .container p {
@@ -276,18 +277,15 @@ nav a:hover, nav a.active {
     border-radius: 10px;
     border: 1px solid #ddd;
     text-align: center;
-    /* Esto hace que el movimiento sea suave */
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
 }
 
-/* Efecto al pasar el mouse (Hover) */
 .producto-card:hover {
-    transform: translateY(-10px); /* Se eleva 10 píxeles */
-    box-shadow: 0 15px 30px rgba(0, 50, 133, 0.15); /* Sombra azulada suave */
-    border-color: var(--azul-principal); /* El borde cambia al azul */
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 50, 133, 0.15);
+    border-color: var(--azul-principal);
 }
 
-/* Efecto opcional para la imagen dentro de la tarjeta */
 .producto-card img {
     max-width: 100%;
     border-radius: 5px;
@@ -296,7 +294,7 @@ nav a:hover, nav a.active {
 }
 
 .producto-card:hover img {
-    transform: scale(1.05); /* La foto crece un 5% muy sutilmente */
+    transform: scale(1.05);
 }
 
 /* ============================================================
@@ -309,6 +307,8 @@ nav a:hover, nav a.active {
   background: var(--blanco); 
   border-radius: 10px; 
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1;
 }
 
 .cotizador label, .contacto-form label {
@@ -331,7 +331,6 @@ input, select, textarea {
 button[type="submit"] {
     background-color: var(--azul-principal);
     color: #ffffff !important;
-    text-transform: none;         /* Mantiene mayúsculas y minúsculas */
     border: none;
     padding: 14px 30px;
     border-radius: 6px;
@@ -339,15 +338,13 @@ button[type="submit"] {
     font-size: 16px;
     cursor: pointer;
     width: 100%;
-    transition: all 0.3s ease;    /* Esto hace que la animación sea suave */
+    transition: all 0.3s ease;
 }
 
-/* --- EFECTO DE MOVIMIENTO (HOVER) --- */
 button[type="submit"]:hover {
     background-color: var(--azul-oscuro);
-    color: #ffffff !important;
-    transform: translateY(-4px);  /* Hace que el botón "suba" al pasar el mouse */
-    box-shadow: 0 6px 15px rgba(0, 50, 133, 0.3); /* Agrega una sombra al elevarse */
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 50, 133, 0.3);
 }
 
 .contacto-grid {
@@ -377,12 +374,11 @@ button[type="submit"]:hover {
 }
 
 /* ============================================================
-    7. FOOTER (VERSIÓN COMPACTA ESTILO CUN)
+    7. FOOTER
    ============================================================ */
 footer {
   background-color: var(--negro-footer);
   color: var(--blanco);
-  /* Bajamos de 50px a 25px para que la franja sea delgada */
   padding: 25px 20px 15px 20px; 
   margin-top: 40px;
 }
@@ -394,18 +390,17 @@ footer {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
-  /* Eliminamos el padding-bottom */
   padding-bottom: 10px;
 }
 
 .footer-column {
-  flex: 1 1 200px; /* Columnas un poco más estrechas */
+  flex: 1 1 200px;
 }
 
 .footer-column h3 {
   color: var(--amarillo-hg) !important;
   text-align: left;
-  margin-bottom: 10px; /* Espacio reducido debajo del título */
+  margin-bottom: 10px;
   font-size: 1.1rem;
 }
 
@@ -413,16 +408,16 @@ footer {
   color: var(--blanco) !important;
   border-bottom: 2px solid var(--amarillo-hg);
   display: inline-block;
-  margin-bottom: 10px; /* Espacio reducido debajo del subtítulo */
+  margin-bottom: 10px;
   font-size: 16px;
   text-align: left;
 }
 
 .footer-column p, .footer-column li a {
-  font-size: 13px; /* Letra un poco más pequeña y profesional */
+  font-size: 13px;
   color: #cccccc;
   text-decoration: none;
-  line-height: 1.5; /* Espaciado entre líneas más apretado */
+  line-height: 1.5;
 }
 
 .footer-column ul {
@@ -436,28 +431,20 @@ footer {
   transition: 0.3s;
 }
 
-/* El resaltado del email se mantiene igual */
 .footer-column a[href^="mailto:"] {
     color: var(--amarillo-hg) !important;
     font-weight: 600;
-    text-decoration: none;
-    transition: 0.3s ease;
-}
-
-.footer-column a[href^="mailto:"]:hover {
-    color: var(--blanco) !important;
-    text-decoration: underline;
 }
 
 .footer-bottom {
   border-top: 1px solid #333;
-  margin-top: 15px; /* Menor separación con el contenido */
+  margin-top: 15px;
   padding-top: 15px;
   text-align: center;
 }
 
 .footer-bottom p {
-  font-size: 12px; /* Letra de derechos reservados más pequeña */
+  font-size: 12px;
   color: #666 !important;
 }
 
@@ -469,31 +456,55 @@ footer {
     display: flex; 
   }
 
+  /* ============================================================
+    8. RESPONSIVE
+   ============================================================ */
+@media screen and (max-width: 768px) {
+  .menu-toggle { 
+    display: flex; 
+  }
+
   .nav-container {
     position: fixed; 
-    top: 0; 
+    top: 10px; 
     right: -100%; 
     width: 260px; 
-    height: 100vh;
     background-color: var(--azul-principal); 
     transition: 0.4s; 
-    z-index: 1050;
+    z-index: 99999 !important; 
+    pointer-events: all !important;
     box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+    border-radius: 15px 0 15px 15px;
+    padding-bottom: 8px;
   }
+
+  /* ... el resto del código sigue igual ... */
+}
 
   .nav-container.active { 
     right: 0; 
   }
 
+  .nav-container::before {
+    content: "¡Hola!";
+    display: block;
+    color: #FAE251;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 25px 8px 25px; 
+    text-align: left;
+    line-height: 1.2;
+  }
+
   nav ul { 
     flex-direction: column; 
-    padding-top: 70px; 
+    padding: 0; 
   }
 
   nav a { 
     width: 100%; 
     border-bottom: 1px solid rgba(255,255,255,0.1); 
-    padding: 20px; 
+    padding: 12px 25px; 
   }
 
   .nosotros-contenido, .contacto-grid, .servicios-grid {
@@ -510,7 +521,7 @@ footer {
   }
 
   .hero-content h1 span {
-    font-size: 2.2rem; /* Tamaño más cómodo para celulares */
+    font-size: 2.2rem;
   }
 
   .cta-buttons {
@@ -520,7 +531,7 @@ footer {
 }
 
 /* ============================================================
-    9. ANIMACIONES
+    9. ANIMACIONES Y SOLUCIÓN DE SCROLL
    ============================================================ */
 .animado { opacity: 0; transition: 0.8s ease-out; }
 .animado.visible { opacity: 1; transform: none; }
@@ -528,53 +539,16 @@ footer {
 .slide-right { transform: translateX(50px); }
 .zoom { transform: scale(0.8); }
 
-@media screen and (max-width: 768px) {
-    .nav-container {
-        height: auto !important;
-        top: 10px; /* Un poco más de aire con el borde superior */
-        padding-bottom: 8px; /* Espacio suave al final */
-        border-radius: 15px 0 15px 15px;
-    }
-
-    .nav-container::before {
-        content: "¡Hola!";
-        display: block;
-        color: #FAE251; /* Amarillo corporativo */
-        font-size: 20px;
-        font-weight: bold;
-        /* Aumentamos de 10px a 15px arriba y de 2px a 8px abajo */
-        padding: 15px 25px 8px 25px; 
-        text-align: left;
-        line-height: 1.2;
-    }
-
-    .nav-container ul {
-        margin-top: 0;
-        padding-top: 0;
-    }
-
-    .nav-container a {
-        /* Se mantiene los botones compactos pero legibles */
-        padding: 12px 25px; 
-    }
-}
-
-/* --- SOLUCIÓN DE SCROLL LATERAL (NOSOTROS Y SERVICIOS) --- */
 html, body {
     max-width: 100%;
     overflow-x: hidden;
 }
 
 @media screen and (max-width: 768px) {
-    .nosotros-contenido, 
-    .servicios-grid, 
-    .contacto-grid {
+    .nosotros-contenido, .servicios-grid, .contacto-grid {
         width: 100% !important;
-        max-width: 100% !important;
         padding-left: 15px !important;
         padding-right: 15px !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
         box-sizing: border-box !important;
     }
 }

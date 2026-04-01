@@ -1,22 +1,43 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Seleccionamos el botón de las 3 rayitas
-    const botón = document.querySelector('.menu-toggle');
-    // Seleccionamos la franja azul
-    const menú = document.querySelector('.nav-container');
-    // Seleccionamos los enlaces (Inicio, Nosotros, etc.)
-    const enlaces = document.querySelectorAll('nav a');
+/* ============================================================
+    CONTROL DE NAVEGACIÓN - LOGÍSTICO HG
+   ============================================================ */
+document.addEventListener("click", function(event) {
+    const boton = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.nav-container');
 
-    if (botón && menú) {
-        // Al hacer clic en las rayitas, quitamos o ponemos la clase 'active'
-        botón.addEventListener('click', function() {
-            menú.classList.toggle('active');
-        });
+    // Si por alguna razón no existen los elementos en el HTML, no hacemos nada
+    if (!boton || !menu) return;
 
-        // Al hacer clic en cualquier opción, cerramos la franja azul
-        enlaces.forEach(function(enlace) {
-            enlace.addEventListener('click', function() {
-                menú.classList.remove('active');
-            });
-        });
+    // 1. ABRIR / CERRAR (Clic en las 3 rayitas)
+    if (boton.contains(event.target)) {
+        menu.classList.toggle('active');
+        return;
+    }
+
+    // 2. CIERRE AUTOMÁTICO (Solo si el menú está abierto)
+    if (menu.classList.contains('active')) {
+        
+        // Si haces clic en un enlace (Inicio, Nosotros, etc.) se cierra
+        if (event.target.tagName === 'A') {
+            menu.classList.remove('active');
+            return;
+        }
+
+        // Si haces clic fuera del menú azul, se cierra 
+        // (Esto es lo que te funciona perfecto en Cotizador y Contacto)
+        if (!menu.contains(event.target)) {
+            menu.classList.remove('active');
+        }
+    }
+});
+
+/* ============================================================
+    SEGURIDAD DE FORMULARIOS (COTIZADOR Y CONTACTO)
+   ============================================================ */
+document.addEventListener("submit", function(e) {
+    const btn = e.target.querySelector('button[type="submit"]');
+    if (btn) {
+        btn.disabled = true;
+        btn.innerText = "Enviando...";
     }
 });
