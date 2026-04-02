@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // 3. CONFIGURACIÓN DEL CORREO
-    $destinatario = "logisticohg@gmail.com"; 
+    $destinatario = "info@logisticohg.com"; 
     $asunto = "Nueva solicitud de cotización - Logístico HG";
     
     // Cuerpo del correo bien organizado

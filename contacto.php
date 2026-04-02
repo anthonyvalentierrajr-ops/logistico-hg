@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // 3. CONFIGURACIÓN DEL MENSAJE
-    $destinatario = "logisticohg@gmail.com"; 
+    $destinatario = "info@logisticohg.com"; // Cambia esto al correo de tu empresa
     $asunto = "Nuevo mensaje de contacto - Web Logístico HG";
     
     $cuerpo = "Has recibido un nuevo mensaje desde el formulario de contacto:\n\n";
